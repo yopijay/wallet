@@ -58,7 +58,7 @@ def create_products_sheet():
     ws.column_dimensions['E'].width = 12
     ws.column_dimensions['F'].width = 12
     
-    wb.save("/home/runner/work/wallet/wallet/products.xlsx")
+    wb.save("products.xlsx")
     print("Created products.xlsx")
 
 def create_size_and_colors_sheet():
@@ -109,7 +109,7 @@ def create_size_and_colors_sheet():
     ws.column_dimensions['C'].width = 18
     ws.column_dimensions['D'].width = 18
     
-    wb.save("/home/runner/work/wallet/wallet/size_and_colors.xlsx")
+    wb.save("size_and_colors.xlsx")
     print("Created size_and_colors.xlsx")
 
 def create_orders_sheet():
@@ -172,7 +172,7 @@ def create_orders_sheet():
     ws.column_dimensions['H'].width = 12
     ws.column_dimensions['I'].width = 40
     
-    wb.save("/home/runner/work/wallet/wallet/orders.xlsx")
+    wb.save("orders.xlsx")
     print("Created orders.xlsx")
 
 def main():
