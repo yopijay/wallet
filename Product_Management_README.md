@@ -56,12 +56,12 @@ All dropdowns are linked to their respective source sheets, ensuring data consis
 ### 2. Auto-Population
 
 #### Order ID
-- **Formula**: `=IF(B{row}="","",1000+ROW()-1)`
+- **Formula**: `=IF(B2="","",1000+ROW()-1)` (where 2 represents the row number, adjusts for each row)
 - **Behavior**: Automatically generates a unique order ID when a product is selected
 - **Starting value**: 1001 for the first order
 
 #### Price
-- **Formula**: `=VLOOKUP(B{row},Products!A:B,2,FALSE)`
+- **Formula**: `=VLOOKUP(B2,Products!A:B,2,FALSE)` (where 2 represents the row number, adjusts for each row)
 - **Behavior**: Automatically looks up and displays the price when a product is selected
 - **Source**: Retrieves price from the Products sheet
 
@@ -87,6 +87,8 @@ All dropdowns are linked to their respective source sheets, ensuring data consis
 5. Select a **Size** from the dropdown in column C
 6. Select a **Color** from the dropdown in column D
 7. The **Order ID** and **Price** will automatically populate
+
+**Important Note**: The size and color dropdowns show all available options across all products. Please refer to the **Sizes and Colors** sheet to verify that your selected size/color combination is valid for your chosen product. Future enhancements could include dependent dropdowns that filter based on product selection.
 
 ### Adding New Products
 1. Go to the **Products** sheet
